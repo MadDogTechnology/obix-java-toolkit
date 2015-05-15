@@ -1,7 +1,7 @@
 /*
  * This code licensed to public domain
  */
-package obix.test;
+package test;
 
 import java.io.*;
 import obix.*;
@@ -24,7 +24,8 @@ public class ContractTest
 // Main
 ////////////////////////////////////////////////////////////////  
 
-  public void run()
+  @org.junit.Test
+  public void contract()
     throws Exception
   {                          
     // verify !useContracts flag

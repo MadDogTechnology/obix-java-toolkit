@@ -1,7 +1,7 @@
 /*
  * This code licensed to public domain
  */
-package obix.test;
+package test;
 
 import obix.Date;
 
@@ -20,7 +20,8 @@ public class DateTest
 // Main
 ////////////////////////////////////////////////////////////////  
 
-  public void run()
+  @org.junit.Test
+  public void dates()
     throws Exception
   {                   
     // constructor

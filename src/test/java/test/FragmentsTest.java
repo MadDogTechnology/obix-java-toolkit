@@ -1,7 +1,7 @@
 /*
  * This code licensed to public domain
  */
-package obix.test;
+package test;
 
 import obix.*;
 import obix.Enum;
@@ -23,7 +23,8 @@ public class FragmentsTest
 // Main
 ////////////////////////////////////////////////////////////////  
 
-  public void run()
+  @org.junit.Test
+  public void fragments()
     throws Exception
   {         
     Obj obj = make( 

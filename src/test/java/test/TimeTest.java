@@ -1,7 +1,7 @@
 /*
  * This code licensed to public domain
  */
-package obix.test;
+package test;
 
 import obix.Time;
 
@@ -24,7 +24,8 @@ public class TimeTest
 // Main
 ////////////////////////////////////////////////////////////////  
 
-  public void run()
+  @org.junit.Test
+  public void time()
     throws Exception
   {                   
     // constructor

@@ -1,7 +1,7 @@
 /*
  * This code licensed to public domain
  */
-package obix.test;
+package test;
 
 /**
  * TestException

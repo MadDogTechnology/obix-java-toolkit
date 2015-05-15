@@ -1,17 +1,10 @@
 /*
  * This code licensed to public domain
  */
-package obix.test;
+package test;
 
 import obix.Uri;
 
-/**
- * UriTest ensures Uri follows URI RFC 2396 and Obix rules
- *
- * @author    Brian Frank
- * @creation  27 Apr 05
- * @version   $Revision$ $Date$
- */
 public class UriTest
   extends Test
 { 
@@ -20,7 +13,8 @@ public class UriTest
 // Test
 ////////////////////////////////////////////////////////////////
 
-  public void run()
+  @org.junit.Test
+  public void uri()
     throws Exception
   {           
     verifyAbs("http://foo/",     "http",  "foo",     -1, "/");

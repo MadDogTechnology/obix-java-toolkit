@@ -1,7 +1,7 @@
 /*
  * This code licensed to public domain
  */
-package obix.test;
+package test;
 
 import java.io.*;
 import java.util.TimeZone;
@@ -25,7 +25,8 @@ public class IOTest
 // Test
 ////////////////////////////////////////////////////////////////
 
-  public void run()
+  @org.junit.Test
+  public void io()
     throws Exception
   {      
     // single obj                

@@ -1,40 +1,15 @@
 /*
  * This code licensed to public domain
  */
-package obix.test;
+package test;
 
 import java.io.*;
 import obix.*;
 import obix.Enum;
 import obix.io.*;
 
-/**
- * Test is base class for all Test classes as well as 
- * main entry point for running obix unit tests.
- *
- * @author    Brian Frank
- * @creation  27 Apr 05
- * @version   $Revision$ $Date$
- */
 public abstract class Test
 { 
-
-////////////////////////////////////////////////////////////////
-// Test List
-////////////////////////////////////////////////////////////////
-
-  public static final Test[] tests =
-  {
-    new TreeTest(),
-    new IOTest(),
-    new AbstimeTest(),
-    new ReltimeTest(),
-    new TimeTest(),
-    new DateTest(),
-    new UriTest(),
-    new ContractTest(),
-    new FragmentsTest(),
-  };
 
 ////////////////////////////////////////////////////////////////
 // Test
@@ -44,9 +19,6 @@ public abstract class Test
   {
     return getClass().getName();
   }
-  
-  public abstract void run()
-    throws Exception;
 
 ////////////////////////////////////////////////////////////////
 // Utils
@@ -237,44 +209,7 @@ public abstract class Test
     return piped;
   }
 
-////////////////////////////////////////////////////////////////
-// Main
-////////////////////////////////////////////////////////////////
-
-  public static void main(String args[])
-  {                            
-    // check args for filter             
-    String filter = "";
-    if (args.length > 0 && !args[0].startsWith("/")) 
-      filter = "obix.test." + args[0];         
-    
-    // check args for options  
-    for(int i=0; i<args.length; ++i)
-      if (args[i].equals("/v")) verbose = true;   
-     
-    // run tests
-    for(int i=0; i<tests.length; ++i)
-    {        
-      Test test = tests[i]; 
-      if (!test.getName().startsWith(filter)) continue;
-      try
-      {         
-        test.run();
-        System.out.println("Success: " + test.getName() + " [" + test.count + "]");
-      }
-      catch(Throwable e)
-      {        
-        System.out.println("FAILED:  " + test.getName());
-        e.printStackTrace();
-      }
-    }  
-  }
-    
-////////////////////////////////////////////////////////////////
-// Fields
-////////////////////////////////////////////////////////////////
-
-  static boolean verbose;
+  static boolean verbose = true;
 
   int count;  
   byte[] binaryRoundtrip;

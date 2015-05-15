@@ -1,7 +1,7 @@
 /*
  * This code licensed to public domain
  */
-package obix.test;
+package test;
 
 import java.util.*;
 
@@ -59,7 +59,8 @@ public class AbstimeTest
 // Driver
 ////////////////////////////////////////////////////////////////  
 
-  public void run()
+  @org.junit.Test
+  public void abstimes()
     throws Exception
   {             
     verifyBasics();

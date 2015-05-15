@@ -1,7 +1,7 @@
 /*
  * This code licensed to public domain
  */
-package obix.test;
+package test;
 
 import obix.Obj;
 
@@ -20,7 +20,8 @@ public class TreeTest
 // Test
 ////////////////////////////////////////////////////////////////
 
-  public void run()
+  @org.junit.Test
+  public void trees()
     throws Exception
   {
     Obj p = new Obj();
