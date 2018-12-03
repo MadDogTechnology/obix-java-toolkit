@@ -1,3 +1,9 @@
+# obix-java-toolkit
+**Owner(s):** Derek VerLee
+
+# Repo is Inactive
+
+
 # oBIX Java Toolkit
 
 This as adaptation of the (public domain) "oBIX Java Toolkit" source code, repackaged with a gradle build script. 
